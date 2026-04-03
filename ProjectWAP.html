@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Expense Tracker</h1>
+
+    <!-- dropdown pilih user -->
+    <select id="userSelect" onchange="selectUser()">
+        <option value="">-- Select User --</option>
+    </select>
+
+    <!-- input nama -->
+    <input type="text" id="name" placeholder="Name">
+
+    <!-- pilih tipe transaksi -->
+    <select id="type" onchange="toggleCategory()">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <!-- Input amount -->
+    <input type="number" id="amount" placeholder="Amount">
+
+    <!-- Category -->
+    <div id="categorySection">
+        <select id="category">
+            <option value="Consumption">Consumption</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Others">Others</option>
+        </select>
+    </div>
+
+    <!-- Button add transaction -->
+    <button onclick="addTransaction()">Add Transaction</button>
+
+    <h2>Transaction List</h2>
+    <ul id="list"></ul>
+
+    <h2>Summary</h2>
+    <p id="income"></p>
+    <p id="expense"></p>
+    <p id="balance"></p>
+    <p id="biggest"></p>
+    <p id = "expensePercent"></p>
+
+    <!-- hapus semua data -->
+    <button onclick="clearData()">Delete All Data</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
